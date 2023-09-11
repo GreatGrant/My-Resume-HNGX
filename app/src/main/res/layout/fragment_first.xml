@@ -45,14 +45,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Slack Handle: @Grant Williams" />
+                android:text=" @Grant Williams"
+                app:drawableStartCompat="@drawable/slack" />
 
             <TextView
                 android:id="@+id/githubTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="GitHub: github.com/GreatGrant" />
+                android:text=" github.com/GreatGrant"
+                app:drawableStartCompat="@drawable/github" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
