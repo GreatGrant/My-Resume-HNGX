@@ -36,6 +36,9 @@ Ensure the app updates dynamically without requiring manual refresh.
 - **Save and Edit**: Save your resume and edit it anytime you need.
 - **Material Design**: The app follows Material Design guidelines for a clean and intuitive user experience.
 
+## Demo
+You can try the app online using [Appetize.io](https://appetize.io/app/ghwmsgyahnki6lmkcwvgpqnnsm?device=pixel4&osVersion=11.0&scale=75)
+
 ## Installation
 
 1. Clone this repository to your local machine:
@@ -53,3 +56,7 @@ Ensure the app updates dynamically without requiring manual refresh.
 4. Hit the "Save" button to store your resume.
 5. To edit your resume, simply tap on the floating "Edit" button at the bottom.
 6. Explore the app, experiment with different sections, and make your resume stand out!
+
+## Acknowledgment
+
+This project was completed as part of the HNGX internship program.
