@@ -17,6 +17,12 @@ class ResumeViewModel: ViewModel(){
     private val _slackLiveData = MutableLiveData<String>()
     val slackLiveData : LiveData<String> get() = _slackLiveData
 
+    init {
+        _nameLiveData.postValue("Grant Williams")
+        _bioLiveData.postValue("Native android developer with expertise in creating innovative and user-friendly apps.\n\nAdept at collaborating with cross-functional teams to deliver cutting-edge, user-friendly apps that meet client and user expectations.\n")
+        _slackLiveData.postValue("@Grant Williams")
+        _gitLiveData.postValue("@GreatGrant")
+    }
     fun setName(name: String){
         _nameLiveData.postValue(name)
     }
@@ -30,6 +36,6 @@ class ResumeViewModel: ViewModel(){
     }
 
     fun setSlack(slackHandle: String){
-        _gitLiveData.postValue(slackHandle)
+        _slackLiveData.postValue(slackHandle)
     }
 }

@@ -34,6 +34,7 @@ class EditResumeFragment : Fragment() {
 
         resumeViewModel = ViewModelProvider(requireActivity())[ResumeViewModel::class.java]
 
+        prePopulateFields()
         binding.saveButton.setOnClickListener {
             val isNameValid = validateField(binding.nameEditText, binding.nameTextInputLayout, "Enter a name")
             val isBioValid = validateField(binding.bioEditText, binding.bioTextInputLayout, "Write your bio")
@@ -59,6 +60,26 @@ class EditResumeFragment : Fragment() {
 //        }
     }
 
+    private fun prePopulateFields() {
+        resumeViewModel.apply {
+            nameLiveData.observe(viewLifecycleOwner) { newName ->
+                binding.nameEditText.setText(newName)
+            }
+
+            bioLiveData.observe(viewLifecycleOwner){newBio ->
+                binding.bioEditText.setText(newBio)
+            }
+
+            slackLiveData.observe(viewLifecycleOwner){newSlackHandle ->
+                binding.slackEditText.setText(newSlackHandle)
+            }
+
+            gitLiveData.observe(viewLifecycleOwner){newGitUrl ->
+                binding.githubEditText.setText(newGitUrl)
+            }
+        }
+
+    }
 
 
     override fun onDestroyView() {
